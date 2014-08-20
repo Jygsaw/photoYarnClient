@@ -71,6 +71,8 @@ function _createAddPhotoButton() {
 }
 
 function _setListeners() {
+  this.scrollView.pipe(this._eventOutput);
+
   this._eventInput.on('initYarnData', function(data) {
     this.yarnData = data;
     this.createDetail(data);
